@@ -1,0 +1,17 @@
+{
+  "name": "auth0-lit",
+  "version": "0.0.1",
+  "description": "implementing auth0 lock as a lit-element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "John Lim Ding Wei",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "polymer-cli": "^1.9.5"
+  }
+}
