@@ -21,7 +21,7 @@ class MyElement extends LitElement {
       <!-- template content -->
       <style>
         .auth0-lock-overlay {
-          display: block;
+          display: flex;
           background: radial-gradient(#40404b, #111118) rgba(34,34,40, 0.94);
           background-color: rgba(34,34,40, 0.94);
           position: fixed;
@@ -61,10 +61,38 @@ class MyElement extends LitElement {
         fill: #eb5424;
         fill-opacity: 1;
       }
-
+      
+      .auth0-lock-center {
+        display: flex; 
+        background: red;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        max-height: 100vh;
+        border-radius: 5px;
+      }
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      } 
+      .auth0-lock-header-welcome {
+        display: flex;
+        width: 100px;
+        height: 100px;
+      }
+      .auth0-lock-header-logo {
+      }
       </style>
       
-      <div class="auth0-lock-overlay">
+      <div class="auth0-lock-overlay" style="justify-content: center; align-items: center">
+        <div class="auth0-lock-center">
+           <p>A paragraph</p>
+          <div class="auth0-lock-header-welcome"><img alt="" class="auth0-lock-header-logo"
+                                                      src="//cdn.auth0.com/styleguide/components/1.0.8/media/logos/img/badge.png">
+            <div class="auth0-lock-name" title="Auth0">Auth0</div>
+          </div> 
+        </div> 
+      
         <span class="auth0-lock-badge-bottom">
           <a href="https://auth0.com/?utm_source=lock&amp;utm_campaign=badge&amp;utm_medium=widget" target="_blank" class="auth0-lock-badge">
             <!-- react-text: 37 -->Protected with <!-- /react-text -->
@@ -83,7 +111,6 @@ class MyElement extends LitElement {
           </a>
         </span>
       </div>
-      <p>A paragraph</p>
     `;
   }
 }
